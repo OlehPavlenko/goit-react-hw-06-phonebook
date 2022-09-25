@@ -13,3 +13,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  padding: 0 20px;
+}
+
+
+.contact_item {
+  margin-bottom: 5px;
+
+
+}
+
+.del-btn {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.del-btn:active {
+  background-color: lightseagreen;
+}
+
+button {
+  margin-left: 10px;
+}
