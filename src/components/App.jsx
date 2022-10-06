@@ -1,25 +1,28 @@
-import { useState } from 'react';
-import ContactForm from './contactForm';
-import Filter from './filter';
-import MarkUp from './markUp';
+import React from "react";
+import { ContactList } from "./ContactList";
+import { Box } from "./Box";
+import { FormikContactForm } from "./FormikContactForm/FormikContactForm";
+import { GlobalStyle } from "GlobalStyle";
+import { Field2 } from './Filter/Filter';
 
-const App = () => {
-  const [filter, setFilter] = useState('');
 
-  // -------------- Фунція зміни інпуту відповідно до стейту
+export const App = () => {
 
-  const onChange = e => {
-    const { value } = e.currentTarget;
-    setFilter(value);
-  };
-
-  return (
-    <div className="container">
-      <ContactForm />
-      <Filter onChange={onChange} filter={filter} />
-      <MarkUp filter={filter} />
-    </div>
-  );
-};
-
-export default App;
+  return (<>
+    <Box
+      m={4}
+      p={4}
+      height="100vh"
+      bg='#f6f6f6'
+      maxWidth='700px'
+      ml='auto'
+      mr='auto'
+    ><GlobalStyle />
+      <FormikContactForm/>
+      <ContactList>
+        <Field2 />
+      </ContactList>
+    </Box>
+  </>
+  )
+}
